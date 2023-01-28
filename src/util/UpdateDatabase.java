@@ -103,10 +103,10 @@ public class UpdateDatabase {
 
         if (h4Title.equals("スーパースターポケモン")) {
             starTitle = StarTitle.スーパースター;
-            starNumber = "6";
+            starNumber = "6★★★★★★";
         } else if (h4Title.equals("スターポケモン")) {
             starTitle = StarTitle.スター;
-            starNumber = "5";
+            starNumber = "5★★★★★";
         } else if (h4Title.equals("★2〜4ポケモン")) { // "〜" is U+301C (used from 1弾 to 4弾)
             starTitle = StarTitle.無し;
             starNumber = "?";
