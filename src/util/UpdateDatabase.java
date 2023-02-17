@@ -149,11 +149,11 @@ public class UpdateDatabase {
     }
 
     private static void downloadImage(String uri, Path savePath) throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(uri))
-                .build();
-
         if (savePath.toFile().createNewFile()) {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(uri))
+                    .build();
+
             CLIENT.send(request, HttpResponse.BodyHandlers.ofFile(savePath));
             System.out.println(savePath);
         }
